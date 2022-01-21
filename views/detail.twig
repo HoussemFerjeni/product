@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product details</title>
+</head>
+<body>
+    <p>
+      {{ data.productName }} {{ data.category }}
+    </p>
+    <p>
+   {{ data.description }} 
+    </p>
+        <p>
+   {{ data.price }} 
+    </p>
+    <div>
+        <img src="{{ data.imageUrl }}" style="width: 300px;" alt="img">
+    </div>
+      {% for rating in data.reviews %}
+    <div>
+         Value:   {{ rating.value }}
+         Content:  {{ rating.content }}    
+    </div>
+     {% endfor %}
+</body>
+</html>
